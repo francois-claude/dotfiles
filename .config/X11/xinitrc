@@ -1,0 +1,33 @@
+#!/bin/sh
+
+XINIT_USER_XRESOURCES='/home/fclaude/.config/X11/xresources'
+XINIT_AUTOLOCK_SCRIPT='/home/fclaude/.config/i3/scripts/lock/i3_pixel_lock_kill_monitors.sh'
+
+# Load xresources
+if [ -f "$XINIT_USER_XRESOURCES" ]; then
+    /usr/bin/xrdb -merge "$XINIT_USER_XRESOURCES"
+fi
+
+# Load xinitrc.d scripts
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+     for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+          [ -x "$f" ] && . "$f"
+     done
+     unset f
+fi
+
+# launch polkit in background
+if [ -x /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 ]; then
+    /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+fi
+
+## Start xautolock in background
+#if [ -x "$XINIT_AUTOLOCK_SCRIPT" ]; then
+#    /usr/bin/xautolock -time 30 -locker "$XINIT_AUTOLOCK_SCRIPT" -secure &
+#fi
+
+# start i3
+if [ -x /usr/bin/i3 ]; then
+    exec /usr/bin/i3
+fi
+

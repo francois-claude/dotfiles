@@ -1,0 +1,15 @@
+# ALSA config
+
+# Set card at index 0 to default
+defaults.pcm.card 0;
+defaults.ctl.card 0;
+
+pcm.!default {
+  type hw
+  card 0
+}
+
+ctl.!default {
+  type hw
+  card 0
+}

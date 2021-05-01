@@ -1,0 +1,63 @@
+{
+  "406F:50A5E823": {
+    "_modelId": "B01D406F0000",
+    "_name": "MX Ergo Multi-Device Trackball ",
+    "_unitId": "EAA33DEC",
+    "divert-keys": {
+      "215": 0,
+      "237": 0,
+      "82": 0,
+      "83": 0,
+      "86": 0,
+      "91": 0,
+      "93": 0
+    },
+    "lowres-smooth-scroll": false,
+    "pointer_speed": 256,
+    "reprogrammable-keys": {
+      "237": 237,
+      "80": 80,
+      "81": 81,
+      "82": 82,
+      "83": 83,
+      "86": 86,
+      "91": 91,
+      "93": 93
+    }
+  },
+  "4082:D8EB79AD": {
+    "_modelId": "B02340820000",
+    "_name": "MX Master 3 Wireless Mouse",
+    "_sensitive": {
+      "dpi": false,
+      "hires-smooth-invert": true,
+      "hires-smooth-resolution": false,
+      "smart-shift": false
+    },
+    "_unitId": "D8EB79AD",
+    "divert-keys": {
+      "195": 0,
+      "196": 0,
+      "215": 0,
+      "82": 0,
+      "83": 0,
+      "86": 0
+    },
+    "dpi": "1500",
+    "hires-smooth-invert": false,
+    "hires-smooth-resolution": true,
+    "reprogrammable-keys": {
+      "195": 195,
+      "196": 196,
+      "80": 80,
+      "81": 81,
+      "82": 82,
+      "83": 83,
+      "86": 86
+    },
+    "smart-shift": 18,
+    "thumb-scroll-invert": false,
+    "thumb-scroll-mode": false
+  },
+  "_version": "1.0.5"
+}

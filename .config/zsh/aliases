@@ -1,0 +1,58 @@
+# --------------------------------------------------------------------------------
+# -- dotfiles --------------------------------------------------------------------
+# --------------------------------------------------------------------------------
+#           _..._
+#         .'     '.      _
+#        /    .-""-\   _/ \
+#      .-|   /:.   |  |   |
+#      |  \  |:.   /.-'-./
+#      | .-'-;:__.'    =/
+#      .'=  *=|NASA _.='
+#     /   _.  |    ;         path..................: ~/.config/zsh/aliases
+#    ;-.-'|    \   |         description...........: terminal shortcuts
+#   /   | \    _\  _\        author................: fclaude
+#   \__/'._;.  ==' ==\       edited................: 03-27-2021
+#            \    \   |      repo..................: github.com/whoiscoos/dotfiles
+#            /    /   /      notes.................: N/A
+#            /-._/-._/
+#            \   `\  \
+#             `-._/._/
+
+# general
+alias h='history'
+alias u='uptime && users'
+alias up='uptime'
+alias aliasconfig='nano ~/.config/zsh/aliases && source ~/.config/zsh/aliases'
+
+# disk usage
+alias dusort='du -hsx * | sort -rh'
+
+# monitoring
+alias cache='watch -d grep -e Dirty: -e Writeback: /proc/meminfo'
+
+# visual
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias shrug="echo -e '\n¯\_(ツ)_/¯\n'"
+
+# i3
+alias i3dir='cd ~/.config/i3'
+
+# pacman
+alias pacup='sudo pacman -Syu'
+alias paclistorph='pacman -Qdt'
+alias paclistinst='pacman -Qe'
+alias paclistall='pacman -Qe'
+alias paclistaur='pacman -Qm'
+alias paclistnative='pacman -Qn'
+
+# wget
+alias wget='wget --hsts-file="/home/fclaude/.config/cache/wget/wget-hsts"'
+
+# zsh
+alias zshconfig='nano "~/.config/zsh/.zshrc"'
+
+# xorg
+alias startx='exec startx /home/fclaude/.config/X11/xinitrc -- /home/fclaude/.config/X11/xserverrc; exit'

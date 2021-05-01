@@ -1,0 +1,48 @@
+{
+    "border": "pixel",
+    "current_border_width": 3,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 530,
+       "width": 802,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "ws3_gotop",
+    "percent": 0.820977917981073,
+    "swallows": [
+       {
+        // "class": "^Gnome\\-terminal$",
+        // "instance": "^gnome\\-terminal\\-server$",
+        "title": "^ws3_gotop$",
+        "window_role": "^ws3_gotop$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 3,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 530,
+       "width": 802,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "ws3_lolcat",
+    "percent": 0.179022082018927,
+    "swallows": [
+       {
+        // "class": "^Gnome\\-terminal$",
+        // "instance": "^gnome\\-terminal\\-server$",
+        "title": "^ws3_lolcat$",
+        "window_role": "^ws3_lolcat$"
+       }
+    ],
+    "type": "con"
+}
+

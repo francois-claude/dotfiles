@@ -1,0 +1,202 @@
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": 0.111485978993865,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 3,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 530,
+               "width": 802,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "ws1_spt",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Gnome\\-terminal$",
+                "instance": "^gnome\\-terminal\\-server$",
+                "title": "^ws1_spt$",
+                "window_role": "^ws1_spt$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 3,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 530,
+               "width": 802,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "cava",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Gnome\\-terminal$",
+                "instance": "^gnome\\-terminal\\-server$",
+                "title": "^cava$",
+                "window_role": "^ws1_cava$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.674935243941553,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 3,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 514,
+               "width": 940,
+               "x": 973,
+               "y": 1994
+            },
+            "marks": [],
+            "name": "Discord",
+            "percent": 0.609975356586887,
+            "swallows": [
+               {
+                "class": "^discord$",
+                "instance": "^discord$",
+                "title": "^Discord$"
+                //"window_role": "^browser\\-window$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splith",
+            "marks": [],
+            "percent": 0.390024643413113,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 466,
+                       "width": 1384,
+                       "x": 28,
+                       "y": 2042
+                    },
+                    "marks": [],
+                    "name": "Bitwarden",
+                    "percent": 0.69375,
+                    "swallows": [
+                       {
+                        "class": "^Bitwarden$",
+                        "instance": "^bitwarden$",
+                        "title": "^Bitwarden$"
+                        //"window_role": "^browser\\-window$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 402,
+                       "width": 504,
+                       "x": 468,
+                       "y": 1079
+                    },
+                    "marks": [],
+                    "name": "Zen monitor",
+                    "percent": 0.30625,
+                    "swallows": [
+                       {
+                        "class": "^zenClass$",
+                        "instance": "^zenmonitor$"
+                        //"title": "^Zen\\ monitor$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": 0.213578777064582,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 3,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 593,
+               "width": 581,
+               "x": 28,
+               "y": 1915
+            },
+            "marks": [],
+            "name": "Telegram (14)",
+            "percent": 0.428472222222222,
+            "swallows": [
+               {
+                "class": "^TelegramDesktop$",
+                "instance": "^telegram\\-desktop$"
+                //"title": "^Telegram\\ \\(14\\)$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 3,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 610,
+               "width": 1384,
+               "x": 28,
+               "y": 2187
+            },
+            "marks": [],
+            "name": "Signal",
+            "percent": 0.571527777777778,
+            "swallows": [
+               {
+                "class": "^Signal$",
+                "instance": "^signal$"
+                //"title": "^Signal$",
+                //"window_role": "^browser\\-window$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
