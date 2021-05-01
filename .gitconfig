@@ -1,0 +1,10 @@
+[user]
+	name = F Claude
+	email =  52762083+whoiscoos@users.noreply.github.com
+	signingkey = 0x1FCAA7B205C6CC71
+[core]
+	editor = nano
+[init]
+	defaultBranch = master
+[commit]
+	gpgsign = true
