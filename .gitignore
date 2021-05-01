@@ -5,3 +5,4 @@ pipewire/media-session.d
 docker/config.json
 spotify-tui/client.yml
 .zcompdump*
+.netrc
