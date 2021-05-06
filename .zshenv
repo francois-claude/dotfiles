@@ -67,11 +67,8 @@ export PSQL_HISTORY="$XDG_CACHE_HOME/pg/psql_history"
 export PGPASSFILE="$XDG_CONFIG_HOME/pg/pgpass"
 export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
 
-# npm
-#export prefix="${XDG_DATA_HOME}/npm"
-#export cache="${XDG_CACHE_HOME}/npm"
-#export tmp="${XDG_RUNTIME_DIR}/npm"
-#export init-module="${XDG_CONFIG_HOME}/npm/config/npm-init.js"
+# weechat
+export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 
 # gpg key
 export KEYID="0x1FCAA7B205C6CC71"

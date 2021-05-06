@@ -1,0 +1,33 @@
+[Unit]
+Description=Picom compositing manager
+Documentation=man:picom(1)
+After=default.target
+Requires=default.target
+StartLimitIntervalSec=30
+StartLimitBurst=5
+
+[Service]
+Type=forking
+#Type=simple
+Environment=PICOM_CONFIG="/home/fclaude/.config/picom/picom.conf"
+
+ExecStartPre=/usr/bin/sleep 1.5
+ExecStart=/usr/bin/picom --daemon --config ${PICOM_CONFIG}
+#ExecReload=kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5s
+
+# disallow writing to /usr, /bin, /sbin, ...
+ProtectSystem=yes
+
+# more paranoid security settings
+NoNewPrivileges=yes
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+RestrictNamespaces=yes
+
+# force terminate on logout
+RemainAfterExit=no
+
+[Install]
+WantedBy=default.target
