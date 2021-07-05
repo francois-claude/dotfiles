@@ -52,6 +52,7 @@ set_layout "$WSNUM" "$WSNAME"
 /usr/bin/i3-msg "workspace $WSNUM:${WSNAME^}; \
 
                 exec --no-startup-id \
+                /usr/bin/firejail --profile=/etc/firejail/spotify.profile \
                 /usr/bin/spotify"
 
 /usr/bin/sleep 2

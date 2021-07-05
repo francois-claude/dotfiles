@@ -8,11 +8,13 @@ StartLimitBurst=5
 
 [Service]
 Type=forking
-#Type=simple
 Environment=PICOM_CONFIG="/home/fclaude/.config/picom/picom.conf"
+Environment=PICOM_LOGFILE="/home/fclaude/.config/picom/logs/picom.log"
+Environment=PICOM_PIDPATH="/run/user/1000/picom.pid"
+PIDFile=picom.pid
 
 ExecStartPre=/usr/bin/sleep 1.5
-ExecStart=/usr/bin/picom --daemon --config ${PICOM_CONFIG}
+ExecStart=/usr/bin/picom --daemon --log-file ${PICOM_LOGFILE} --write-pid-path ${PICOM_PIDPATH} --config ${PICOM_CONFIG}
 #ExecReload=kill -HUP $MAINPID
 Restart=on-failure
 RestartSec=5s

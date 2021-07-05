@@ -9,7 +9,6 @@
 export LC_ALL=en_US.UTF-8
 export TERMINAL=gnome-terminal
 export TERM="xterm-256color"
-export GPG_TTY=$(tty)
 
 ### XDG base directory
 export XDG_CONFIG_HOME="$HOME/.config"

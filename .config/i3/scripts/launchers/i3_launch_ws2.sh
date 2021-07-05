@@ -40,6 +40,7 @@ set_layout "$WSNUM" "$WSNAME"
 /usr/bin/i3-msg "workspace $WSNUM:${WSNAME^}; \
 
                 exec --no-startup-id \
+                /usr/bin/firejail --profile=/etc/firejail/thunderbird.profile \
                 /usr/bin/thunderbird"
 
 /usr/bin/sleep 3

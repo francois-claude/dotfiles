@@ -72,6 +72,11 @@ floating_modifier $mod
 #bindsym $mod+space focus mode_toggle
 
 
+# // floating windows
+# // -----------------------------------------
+for_window [class="gnome-screenshot"] floating enable
+for_window [class="screenshotClass"] floating enable
+
 
 # // toggle mode split
 # // -----------------------------------------
@@ -338,7 +343,7 @@ bindsym $mod+Shift+r exec "/usr/bin/killall picom; /usr/bin/sleep 3; /usr/bin/pi
 
 
 # shutdown / restart / suspend...
-set $mode_system    System (l) lock, (e) logout, (k) kill monitors, (h) halt system, (r) reboot (f) firmware/BIOS
+set $mode_system    System (l) lock, (e) logout, (k) kill monitors, (h) halt system, (r) reboot, (f) firmware/BIOS
 set $i3killmonitors "/home/fclaude/.config/i3/scripts/lock/i3_kill_monitors.sh"
 mode "$mode_system" 
 {
@@ -363,6 +368,36 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
+
+
+### SCREENSHOT TEST
+set $mode_screenshot Screenshot: (s) select, (l) monitor-left, (r) monitor-right, (f) full
+mode "$mode_screenshot"
+{
+    bindsym s exec --no-startup-id /usr/bin/flameshot gui --path=/home/fclaude/Pictures/screenshots, mode "default"
+    bindsym l exec --no-startup-id /usr/bin/flameshot screen --path=/home/fclaude/Pictures/screenshots --number 1, mode "default"
+    bindsym r exec --no-startup-id /usr/bin/flameshot screen --path=/home/fclaude/Pictures/screenshots --number 0, mode "default"
+    bindsym f exec --no-startup-id /usr/bin/flameshot full --path=/home/fclaude/Pictures/screenshots, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym Print mode "$mode_screenshot"
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # resize window (you can also use the mouse for that)

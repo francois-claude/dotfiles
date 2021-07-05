@@ -64,6 +64,7 @@ set_layout "$WSNUM" "$WSNAME"
 /usr/bin/i3-msg "workspace $WSNUM:${WSNAME^}; \
 
                 exec --no-startup-id \
+                /usr/bin/firejail \
                 /usr/bin/discord"
 
 /usr/bin/sleep 2.5
@@ -72,6 +73,7 @@ set_layout "$WSNUM" "$WSNAME"
 /usr/bin/i3-msg "workspace $WSNUM:${WSNAME^}; \
 
                 exec --no-startup-id \
+                /usr/bin/firejail --profile=/etc/firejail/bitwarden.profile \
                 /usr/bin/bitwarden"
 
 /usr/bin/sleep 0.5
@@ -92,15 +94,17 @@ set_layout "$WSNUM" "$WSNAME"
 /usr/bin/i3-msg "workspace $WSNUM:${WSNAME^}; \
 
                 exec --no-startup-id \
+                /usr/bin/firejail --profile=/etc/firejail/telegram-desktop.profile \
                 /usr/bin/telegram-desktop"
 
 /usr/bin/sleep 1
 
 
-# launch signal
+# launch signal-desktop
 /usr/bin/i3-msg "workspace $WSNUM:${WSNAME^}; \
 
                 exec --no-startup-id \
+                /usr/bin/firejail --profile=/etc/firejail/signal-desktop.profile \
                 /usr/bin/signal-desktop"
 
 /usr/bin/sleep 1
