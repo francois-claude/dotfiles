@@ -1,0 +1,5 @@
+{
+  "default.profile.alsa_card.usb-Generic_USB_Audio-00": { "name": "off" },
+  "default.profile.alsa_card.usb-046d_Logitech_BRIO_E4D91CB3-03": { "name": "off" },
+  "default.profile.alsa_card.usb-MOTU_M2_M20000071954-00": { "name": "output:iec958-stereo+input:iec958-stereo" }
+}

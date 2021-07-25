@@ -1,0 +1,24 @@
+---
+version: "3"
+services:
+  syncthing:
+    image: syncthing/syncthing:latest
+    container_name: syncthing
+    hostname: archbtw
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - syncthing_archbtw_config:/var/syncthing
+      - /home/fclaude/Downloads:/syncthing_data/downloads
+      - /home/fclaude/Pictures/screenshots:/syncthing_data/screenshots
+      - /home/fclaude/Pictures/gifs:/syncthing_data/gifs
+      - /home/fclaude/Pictures/wallpaper:/syncthing_data/wallpaper
+    ports:
+      - 127.0.0.1:8384:8384
+      - 22000:22000/tcp
+      - 22000:22000/udp
+    restart: unless-stopped
+
+volumes:
+  syncthing_archbtw_config:
