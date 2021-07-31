@@ -64,17 +64,16 @@ set_layout "$WSNUM" "$WSNAME"
 /usr/bin/i3-msg "workspace $WSNUM:${WSNAME^}; \
 
                 exec --no-startup-id \
-                /usr/bin/firejail \
-                /usr/bin/discord"
+                /usr/bin/flatpak run com.discordapp.Discord"
 
 /usr/bin/sleep 2.5
+
 
 # launch bitwarden
 /usr/bin/i3-msg "workspace $WSNUM:${WSNAME^}; \
 
                 exec --no-startup-id \
-                /usr/bin/firejail --profile=/etc/firejail/bitwarden.profile \
-                /usr/bin/bitwarden"
+                /usr/bin/flatpak run com.bitwarden.desktop"
 
 /usr/bin/sleep 0.5
 
@@ -86,7 +85,6 @@ set_layout "$WSNUM" "$WSNAME"
                 /usr/bin/zenmonitor \
                     --class=zenClass"
 
-
 /usr/bin/sleep 0.5
 
 
@@ -94,19 +92,15 @@ set_layout "$WSNUM" "$WSNAME"
 /usr/bin/i3-msg "workspace $WSNUM:${WSNAME^}; \
 
                 exec --no-startup-id \
-                /usr/bin/firejail --profile=/etc/firejail/telegram-desktop.profile \
-                /usr/bin/telegram-desktop"
+                /usr/bin/flatpak run org.telegram.desktop"
 
-/usr/bin/sleep 1
+/usr/bin/sleep 0.5
 
 
 # launch signal-desktop
 /usr/bin/i3-msg "workspace $WSNUM:${WSNAME^}; \
 
                 exec --no-startup-id \
-                /usr/bin/firejail --profile=/etc/firejail/signal-desktop.profile \
-                /usr/bin/signal-desktop"
+                /usr/bin/flatpak run org.signal.Signal"
 
-/usr/bin/sleep 1
-
-
+/usr/bin/sleep 0.5

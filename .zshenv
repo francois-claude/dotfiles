@@ -54,6 +54,9 @@ export I3_CONFIG="$XDG_CONFIG_HOME/i3"
 # wget
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 
+# go
+GOPATH=$XDG_CONFIG_HOME/go
+
 # docker
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 
@@ -68,6 +71,9 @@ export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
 
 # weechat
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
+
+# zoom
+export SSB_HOME="$XDG_DATA_HOME"/zoom
 
 # gpg key
 export KEYID="0x1FCAA7B205C6CC71"

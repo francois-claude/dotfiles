@@ -52,10 +52,9 @@ set_layout "$WSNUM" "$WSNAME"
 /usr/bin/i3-msg "workspace $WSNUM:${WSNAME^}; \
 
                 exec --no-startup-id \
-                /usr/bin/firejail --profile=/etc/firejail/spotify.profile \
-                /usr/bin/spotify"
+                /usr/bin/flatpak run com.spotify.Client"
 
-/usr/bin/sleep 2
+/usr/bin/sleep 3
 
 
 # launch tty-clock
@@ -67,4 +66,4 @@ set_layout "$WSNUM" "$WSNAME"
                     --role=ws4_tty_clock \
                     -- tty-clock -Ssnc -C 5"
 
-/usr/bin/sleep 0.5
+/usr/bin/sleep 2
