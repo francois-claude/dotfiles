@@ -1,4 +1,5 @@
 .config/zsh/.zhistory
+.config/docker/config.json
 .zhistory
 .bash_history
 pipewire/media-session.d
@@ -6,3 +7,4 @@ docker/config.json
 spotify-tui/client.yml
 .zcompdump*
 .netrc
+
