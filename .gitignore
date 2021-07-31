@@ -1,5 +1,8 @@
 .config/zsh/.zhistory
+.config/gpick/autosave.gpa
+.config/gpick/user_init.lua
 .config/docker/config.json
+.config/pipewire/media-session.d/restore-stream
 .zhistory
 .bash_history
 pipewire/media-session.d
