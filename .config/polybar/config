@@ -60,9 +60,6 @@ font-3 = Font Awesome 5 Free:pixelsize=12;2
 font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-5 = Font Awesome 5 Brands:pixelsize=12;2
 
-modules-left = i3
-modules-right = xkeyboard filesystem pulseaudio memory cpu eth date
-
 ;separator = "|"
 
 ;wm-restack = bspwm
@@ -84,12 +81,17 @@ cursor-scroll = ns-resize
 
 [bar/primary]
 inherit = section/base
+modules-left = i3 spotify
+;modules-center = 
+modules-right = xkeyboard filesystem memory cpu eth date
+
+
 
 [bar/secondary]
 inherit = section/base
-
-modules-center = spotify
-
+modules-left = i3
+;modules-center = spotify
+modules-right = xkeyboard pulseaudio date
 tray-position = right
 tray-padding = 2
 ;tray-background = #0063ff
@@ -99,14 +101,14 @@ tray-padding = 2
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = " "
+format-prefix = "   "
 format = <label>
-exec = python /home/fclaude/.config/polybar/spotify_status.py -t 45 -f '{artist}: {song}'
+exec = python /home/fclaude/.config/polybar/spotify_status.py -t 100 -f '{artist}: {song}'
 format-underline = #1db954
 ;control players (optional)
-click-left = playerctl --player=spotify play-pause 
-click-right = playerctl --player=spotify next 
-click-middle = playerctl --player=spotify previous 
+;click-left = playerctl --player=spotify play-pause 
+;click-right = playerctl --player=spotify next 
+;click-middle = playerctl --player=spotify previous 
 
 [module/xkeyboard]
 type = internal/xkeyboard

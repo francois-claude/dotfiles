@@ -1,24 +1,22 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Select random wallpaper for each screen, by fiddling with the configuration file for nitrogen.
-# TODO: Modify to use getops, allowing you to specify config file locations, etc.
-# TODO: Modify to use an RC file, so that rather than looking at hardcoded shit in this script you go somewhere else. 
+# Terminate already running bar instances
+killall -q nitrogen
 
-CONFIG="$HOME/.config/nitrogen/bg-saved.cfg" # Replace this with whatever the nitrogen config file is.
-WALLPAPERDIR="$HOME/wallpapers/"
+# Wait until the processes have been shut down
+while pgrep -u $UID -x nitrogen >/dev/null; do sleep 1; done
 
-function setwallpaper {
-    # Modify the nitrogen configuration file (default location set in $CONFIG).
-    # $1: Line to modify
-    # TODO: Modify it so that rather than use a line to modify this, we just use the screen name.
-    # Other potential features: allow you to use different modes rather than centre-and-zoom.
-    WALLPAPER=`find $WALLPAPERDIR -type f | grep -E "jpeg|jpg|png" | shuf -n1`
-    echo "$(date -u) -- Setting line $1 to $WALLPAPER."
-    sed -i "$1 c\file=$WALLPAPER" $CONFIG
-    }
+# launch nitrogen (ultrawide)
+/usr/bin/nitrogen \
+  --head=0 \
+  --set-centered \
+  --random '/home/fclaude/Pictures/wallpaper/ultrawide/gradients' 
 
-setwallpaper 7   # screen 1, defined in line #7
-setwallpaper 12  # screen 2, defined in line #12
+/usr/bin/sleep 0.5
 
-# Refresh Nitrogen with new wallpaper.
-nitrogen --restore
+/usr/bin/nitrogen \
+  --head=1 \
+  --set-centered \
+  --random '/home/fclaude/Pictures/wallpaper/vertical/gradients'
+/usr/bin/sleep 0.5
+

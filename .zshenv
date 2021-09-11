@@ -55,7 +55,7 @@ export I3_CONFIG="$XDG_CONFIG_HOME/i3"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 
 # go
-GOPATH=$XDG_CONFIG_HOME/go
+export GOPATH=$XDG_CONFIG_HOME/go
 
 # docker
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
@@ -80,3 +80,14 @@ export KEYID="0x1FCAA7B205C6CC71"
 export GPG_TTY="$(tty)"
  
 #exit 0
+function tess_img {
+    last_screenshot=$(ls -Art ~/Pictures/screenshots/*.png | tail -n 1)
+    temp_file=$(mktemp /tmp/tess-img-script.XXXXXX.txt)
+
+    # The output file arg to this needs to not have .txt
+    # for some reason tesserance appends a ".txt" to it
+    tesseract "$last_screenshot" ${temp_file%.*}
+
+    $VISUAL $temp_file
+    rm "$temp_file"
+}
