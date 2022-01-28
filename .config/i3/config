@@ -228,8 +228,8 @@ bindsym $mod+Shift+$ws5_key move container to workspace number $ws5
 
 # // launcher dialogs
 # // -----------------------------------------
-# mod + < return >                    // new gnome-terminal window
-bindsym $mod+Return exec /usr/bin/gnome-terminal --hide-menubar --role=i3_term_spawn
+# mod + < return >                    // new kitty instance
+bindsym $mod+Return exec /usr/bin/kitty
 
 # mod + < shift > + < return >        // new browser window
 bindsym $mod+Shift+Return exec --no-startup-id gtk-launch $(xdg-settings get default-web-browser)

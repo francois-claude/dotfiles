@@ -1,63 +1,64 @@
-# Inserts a blank line between shell prompts
-add_newline = false
-
-# Replace the "❯" symbol in the prompt with "➜"
-[character]                            # The name of the module we are configuring is "character"
-success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
-
 format = """
+[╭──](white)\
 $username\
 $hostname\
-$shlvl\
 $kubernetes\
 $directory\
 $git_branch\
 $git_commit\
 $git_state\
 $git_status\
-$hg_branch\
 $docker_context\
 $package\
-$cmake\
-$dart\
-$dotnet\
-$elixir\
-$elm\
-$erlang\
 $golang\
 $helm\
 $java\
+$cmake\
 $julia\
 $kotlin\
+$lua\
 $nim\
 $nodejs\
-$ocaml\
-$perl\
-$php\
-$purescript\
 $python\
 $ruby\
 $rust\
-$scala\
 $swift\
 $terraform\
-$vagrant\
-$zig\
-$nix_shell\
-$conda\
-$memory_usage\
 $aws\
 $gcloud\
-$openstack\
-$env_var\
-$crystal\
-$custom\
-$cmd_duration\
-$line_break\
-$lua\
-$jobs\
-$battery\
-$time\
-$status\
-$shell\
-$character"""
+$azure\
+$battery               
+[╰──❯ ](white)"""
+
+add_newline = true
+
+[line_break]
+disabled = false
+
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[✗](bold red) "
+
+[username]
+format = " [$user]($style)"
+style_user = "#94DDCD"
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "@[$hostname ]($style)"
+trim_at = "-"
+style = "#78CCF6"
+disabled = false
+
+[directory]
+truncation_length = 5
+format = "in [$path]($style)[$lock_symbol]($lock_style) "
+style = "#C0C9CE"
+
+[cmd_duration]
+min_time = 8_000
+format = " took [$duration]($style)"
+
+

@@ -95,9 +95,6 @@ plugins=(git gpg-agent zsh-syntax-highlighting command-not-found docker docker-c
 
 source $ZSH/oh-my-zsh.sh
 
-
-
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -124,6 +121,11 @@ fi
 ## source aliases
 if [ -f ~/.config/zsh/aliases ]; then
     . ~/.config/zsh/aliases
+fi
+
+## source functions
+if [ -f ~/.config/zsh/functions ]; then
+    . ~/.config/zsh/functions
 fi
  
 # launch starship
