@@ -78,16 +78,3 @@ export SSB_HOME="$XDG_DATA_HOME"/zoom
 # gpg key
 export KEYID="0x1FCAA7B205C6CC71"
 export GPG_TTY="$(tty)"
- 
-#exit 0
-function tess_img {
-    last_screenshot=$(ls -Art ~/Pictures/screenshots/*.png | tail -n 1)
-    temp_file=$(mktemp /tmp/tess-img-script.XXXXXX.txt)
-
-    # The output file arg to this needs to not have .txt
-    # for some reason tesserance appends a ".txt" to it
-    tesseract "$last_screenshot" ${temp_file%.*}
-
-    $VISUAL $temp_file
-    rm "$temp_file"
-}

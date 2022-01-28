@@ -27,6 +27,9 @@ alias aliasconfig='nano ~/.config/zsh/aliases && source ~/.config/zsh/aliases'
 # disk usage
 alias dusort='du -hsx * | sort -rh'
 
+# vim/nano
+alias nano='/usr/bin/vim'
+
 # monitoring
 alias cache='watch -d grep -e Dirty: -e Writeback: /proc/meminfo'
 
@@ -59,8 +62,3 @@ alias startx='exec startx /home/fclaude/.config/X11/xinitrc -- /home/fclaude/.co
 
 # nitrogen
 alias nitrogen-refresh='/home/fclaude/.config/nitrogen/nitrogen.sh'
-
-
-## functions
-
-
