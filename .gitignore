@@ -1,6 +1,7 @@
 .bash_history
 .netrc
 .config/Atomic?TweetDeck
+.config/btop/btop.log
 .config/celluloid
 .config/chromium
 .config/Code
@@ -32,6 +33,7 @@
 .config/okularpartrc
 .config/okularrc
 .config/oh-my-zsh
+.config/pavucontrol.ini
 .config/picom/logs
 .config/pipewire
 .config/protonmail
