@@ -47,14 +47,10 @@ function umountcloud(){
 
         if [[ $ismount -gt 0 ]]; then
             umount --verbose "$mountpoint"
-            succ=$?
-            if [[ $succ == 0 ]] && [[ -d $mountpoint ]]; then
-                rm -r "$mountpoint"
-            fi
-        else
-            if [[ -d $mountpoint ]]; then
-                rm -r "$mountpoint"
-            fi
+        fi
+
+        if [[ -d $mountpoint ]] && [[ ! "$(ls -A $mountpoint)" ]]; then
+            rm -r "$mountpoint"
         fi
     done
 }

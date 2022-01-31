@@ -118,12 +118,17 @@ if [ -n "$DESKTOP_SESSION" ];then
     export SSH_AUTH_SOCK
 fi
 
-## source aliases
+# enable pip packages
+if [ -d "$HOME/.local/bin" ]; then
+    export PATH="$PATH:$HOME/.local/bin"
+fi
+
+# source aliases
 if [ -f ~/.config/zsh/aliases ]; then
     . ~/.config/zsh/aliases
 fi
 
-## source functions
+# source functions
 if [ -f ~/.config/zsh/functions ]; then
     . ~/.config/zsh/functions
 fi
