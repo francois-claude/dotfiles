@@ -26,11 +26,8 @@ fi
 #    /usr/bin/xautolock -time 30 -locker "$XINIT_AUTOLOCK_SCRIPT" -secure &
 #fi
 
-# start xbindkeys
-xbindkeys -f "$XDG_CONFIG_HOME"/xbindkeys/config
 # Load xbindkeys
 if [ -f "$XINIT_USER_XRESOURCES" ]; then
-    # Load xresources
     xbindkeys -f "$XDG_CONFIG_HOME"/xbindkeys/config
 fi
 
