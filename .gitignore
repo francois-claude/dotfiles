@@ -24,7 +24,8 @@
 .config/knfsshare
 .config/libreoffice
 .config/libvirt
-.config/mozilla
+.config/mozilla/extensions
+.config/mozilla/systemextensionsdev
 .config/mpv
 .config/nautilus
 .config/Nextcloud
