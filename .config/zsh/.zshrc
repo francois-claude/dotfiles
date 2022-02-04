@@ -132,7 +132,9 @@ fi
 if [ -f ~/.config/zsh/functions ]; then
     . ~/.config/zsh/functions
 fi
- 
+
 # launch starship
 eval "$(starship init zsh)"
 
+# launch thefuck
+eval $(thefuck --alias)
