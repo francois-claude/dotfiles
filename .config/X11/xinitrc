@@ -27,7 +27,7 @@ fi
 #fi
 
 # Load xbindkeys
-if [ -f "$XINIT_USER_XRESOURCES" ]; then
+if [ -f "$XDG_CONFIG_HOME"/xbindkeys/config ]; then
     xbindkeys -f "$XDG_CONFIG_HOME"/xbindkeys/config
 fi
 
