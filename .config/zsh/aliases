@@ -60,5 +60,8 @@ alias zshconfig='nano "~/.config/zsh/.zshrc"'
 # xorg
 alias startx='exec startx /home/fclaude/.config/X11/xinitrc -- /home/fclaude/.config/X11/xserverrc; exit'
 
+# kitty ssh
+alias ssh="kitty +kitten ssh"
+
 # nitrogen
 alias nitrogen-refresh='/home/fclaude/.config/nitrogen/nitrogen.sh'
