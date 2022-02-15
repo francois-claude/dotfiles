@@ -76,5 +76,5 @@ export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 export SSB_HOME="$XDG_DATA_HOME"/zoom
 
 # gpg key
-export KEYID="0x1FCAA7B205C6CC71"
+export KEYID="0x440052BFC85F8137"
 export GPG_TTY="$(tty)"
